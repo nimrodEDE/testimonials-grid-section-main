@@ -20,10 +20,10 @@ body {
 }
 
 .container {
-  width: 90%;
-  margin: 3rem auto;
+  margin: 3rem 0.5rem;
   display: grid;
   gap: 1.5rem;
+  /* grid-auto-columns: 1fr; */
 }
 
 .card {
@@ -103,19 +103,24 @@ img {
   background-color: var(--Very-dark-blackish-blue);
 }
 
-@media (min-width: 43.5rem) {
+@media (min-width: 45rem) {
   body {
     height: 100vh;
+    display: flex;
+    align-items: center;
   }
 
   .container {
+    max-width: 95%;
+
     grid-template-areas:
-      "daniel daniel jonathan kira"
-      "jeanette patrick patrick kira";
-    width: 80%;
-    height: 90%;
-    justify-content: center;
-    padding: 8rem;
+      "daniel jonathan"
+      "daniel jeanette"
+      "kira patrick"
+      "kira patrick";
+    margin-inline: auto;
+
+    grid-auto-columns: 1fr;
   }
 
   .daniel {
@@ -136,6 +141,44 @@ img {
 
   .kira {
     grid-area: kira;
-    max-width: 17rem;
+  }
+}
+
+@media (min-width: 65rem) {
+  body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .container {
+    max-width: min(95%, 60rem);
+
+    grid-template-areas:
+      "daniel daniel jonathan kira"
+      "jeanette patrick patrick kira";
+    margin: 0 auto;
+
+    grid-auto-columns: 1fr;
+  }
+
+  .daniel {
+    grid-area: daniel;
+  }
+
+  .jonathan {
+    grid-area: jonathan;
+  }
+
+  .jeanette {
+    grid-area: jeanette;
+  }
+
+  .patrick {
+    grid-area: patrick;
+  }
+
+  .kira {
+    grid-area: kira;
   }
 }
