@@ -108,10 +108,11 @@ img {
     height: 100vh;
     display: flex;
     align-items: center;
+    padding: 25rem 2rem;
   }
 
   .container {
-    max-width: 95%;
+    max-width: 80rem;
 
     grid-template-areas:
       "daniel jonathan"
@@ -152,7 +153,7 @@ img {
   }
 
   .container {
-    max-width: min(95%, 65rem);
+    max-width: min(90%, 65rem);
 
     grid-template-areas:
       "daniel daniel jonathan kira"
